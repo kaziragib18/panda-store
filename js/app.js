@@ -1,3 +1,4 @@
+const productDetails = document.getElementById("product-details");
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
   fetch(url)
@@ -13,15 +14,21 @@ const showProducts = (products) => {
     const image = product.image; //fixed from images to image    
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
-      <div>
+    div.innerHTML = `<div class="single-product m-3 shadow p-3 pb-2 mb-5 bg-body rounded">
+      <div class="pl-2 m-3 w-100">
     <img class="product-image" src="${image}"></img>
       </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <br>
+      <div class= "pb-4">
+      <h3 class="text-info fs-6 fst-italic pt-2">${product.title}</h3>
+      <hr>
+      <p class="fs-6 text-center fw-bold">Category:<span class="text-success"> ${product.category}</p>
+      <h2 class="fs-6 pb-2 fw-bold">Price:<span class="text-danger"> $ ${product.price}</h2>
+      <h2 class="fs-6 pb-2 fw-bold">Rating:<span class="text-primary"> ${product.rating.rate}<span class="text-warning"> <i class="fas fa-star"></i></span></h2>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">Add to cart</button>
+      <button id="details-btn" class="btn btn-danger">Details</button>
+      </div>
+      </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -46,7 +53,7 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = Math.fround(total).toFixed(2);     
+  document.getElementById(id).innerText = Math.fround(total).toFixed(2);
 };
 // console.log();
 
@@ -79,5 +86,3 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal;
 };
-
-// console.log();
