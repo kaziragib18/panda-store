@@ -27,9 +27,9 @@
     <main class="main">
       <section>
       <div class="search-field">
-        <div class="search-box">
-          <input id="input-field" class="form-control" type="text" placeholder="Search from here" />
-          <button type="button" class="btn btn-danger search-button" data-toggle="button" aria-pressed="false"
+        <div class="search-box pb-1">
+          <input id="input-field" class="form-control p-2 rounded rounded-pill" type="text" placeholder=" Search your products"/>
+          <button type="button" class="btn btn-danger search-button rounded rounded-pill fst-italic" data-toggle="button" aria-pressed="false"
             autocomplete="off" id="search-btn" onclick="loadProducts()">
             Search
           </button>
@@ -53,7 +53,7 @@
           <div class="cart mt-3 pb-3" id="my-cart">
             <table class="table">
               <thead>
-                <h1 class="text-center  pt-3 fst-italic fs-4 fw-bold text-dark">My <span class="text-danger">Cart</span></h1>
+                <h1 class="text-center  pt-3 fst-italic fs-4 fw-bold text-dark">My <span class="text-danger">Cart</span> <img class="p-1 mb-2" width="40px" src="image/shopping-cart.svg"></h1>
                 <tr>
                   <th scope="col"></th>
                   <th scope="col"></th>
@@ -93,8 +93,8 @@
                 </tr>
               </tbody>
             </table>
-            <div class="parces text-center">
-              <button class="btn btn-danger text-center fs-6 p-2">Buy Now</button>
+            <div class="parces text-center">  
+              <button class="btn btn-danger text-center pl-2 fst-italic rounded rounded-pill">Buy Now</button> <img class="p-1 mb-2" width="48px" src="image/shopping-bag.svg">
             </div>
           </div>
         </div>
