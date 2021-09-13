@@ -18,14 +18,14 @@ const showProducts = (products) => {
     <img class="product-image" src="${image}"></img>
       </div>
       <br>
-      <div class= "pb-4">
+      <div id="card" class= "pb-4">
       <h3 class="text-info fs-6 fst-italic pt-2">${product.title}</h3>
       <hr>
       <p class="fs-6 text-center fw-bold">Category:<span class="text-success"> ${product.category}</p>
       <hr>
       <h2 class="fs-6 pb-2 fw-bold">Price:<span class="text-danger"> $ ${product.price}</h2>
       <hr>
-      <h2 class="fs-6 pb-2 fw-bold">Rating:<span class="text-primary"> ${product.rating.rate}<span class="text-warning"><i class="fas fa-star"></i></span> / <span class="text-dark">Reviews: <span class="text-primary">${product.rating.count}</span> <img class="p-1 mb-2" width="30px" src="image/review.svg"></h2>
+      <h2 class="fs-6 pb-2 fw-bold">Rating:<span class="text-primary"> ${product.rating.rate}<span class="text-warning"> <i class="fas fa-star"></i></span>  <span class="text-dark">Reviews: <span class="text-primary">${product.rating.count}</span> <img class="p-1 mb-2" width="30px" src="image/review.svg"></h2>
       <hr>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-dark fst-italic rounded rounded-pill pl-2">Add To Cart</button>
       <button id="details-btn" class="btn btn-danger rounded rounded-pill fst-italic pl-2">Details</button>

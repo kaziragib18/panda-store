@@ -96,4 +96,9 @@ body {
   }
 }
 
+#card{
+  background-color: rgba(243, 243, 243, 0.726) !important;
+  border-radius: 4%;
+  box-shadow: rgb(85, 88, 88) !important
+}
 
